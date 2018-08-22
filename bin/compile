@@ -6,7 +6,7 @@ CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 
 if [ -f $ENV_DIR/FRONT_PATH ]; then
-    PROJECT_PATH=`cat $ENV_DIR/FRONT_PATH`
+    FRONT_PATH=`cat $ENV_DIR/FRONT_PATH`
     if [ -d $BUILD_DIR/$FRONT_PATH ]; then
         echo "-----> Subdir buildpack in $FRONT_PATH"
         echo "       moving working dir: $FRONT_PATH to $BUILD_DIR"
